@@ -1,76 +1,461 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista</title>
     <style>
-        body{
+        body {
             background-color: rgb(218, 210, 200);
+            overflow-x: hidden;
         }
-        table, tr, th{
+
+        h1 {
+            text-align: center;
+            margin-top: -29px;
+            color: rgb(255, 0, 0);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: capitalize;
+            margin-top: -37px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        table,
+        tr,
+        th {
             border: 1px solid;
-            min-width: 100px;
+            min-width: 80%;
+            height: 30px;
         }
-        table{
+
+        table {
+            background-color: rgb(255, 235, 205);
+        }
+
+        td {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            margin-left: 5%;
+        }
+
+        table {
             border-collapse: collapse;
         }
-        .definicao{
+
+        .definicao {
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: chocolate;
+            font-weight: bold;
+        }
+
+        .header h2 {
+            animation: cabeca 1s ease-in-out infinite alternate;
+        }
+
+        .table {
+            padding: 2px 2px;
+            border-radius: 20px;
+            background-color: rgb(250, 216, 175);
+            max-width: 1200px;
+            margin: auto 12%;
+            box-shadow: 0 0 20px rgba(69, 35, 35, 0.5);
+        }
+
+        @keyframes cabeca {
+            0% {
+                transform: translateY(-2px);
+            }
+
+            100% {
+                transform: translateY(5px);
+            }
+        }
+
+        /*Aulas*/
+
+        .primeiraAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .segundaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .terceiraAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .quartaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .quintaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .sextaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .setimaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .oitavaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .nonaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .decimaAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .onzeAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .dozeAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        .trezeAula:hover {
+            background-color: rgb(113, 72, 72);
+        }
+
+        /*Semana*/
+
+        .seg:hover {
+            background-color: rgb(143, 135, 183);
+        }
+
+        .ter:hover {
+            background-color: rgb(143, 135, 183);
+        }
+
+        .qua:hover {
+            background-color: rgb(143, 135, 183);
+        }
+
+        .qui:hover {
+            background-color: rgb(143, 135, 183);
+        }
+
+        .sex:hover {
+            background-color: rgb(143, 135, 183);
+        }
+
+
+        /*Responsive*/
+        @media (max-width: 800px) {
+
+            tr,
+            td {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            tr,
+            td {
+                font-size: 10px;
+            }
+
+            h1 {
+                text-align: center;
+                margin-top: -28px;
+                color: rgb(255, 0, 0);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            h2 {
+                text-align: center;
+                text-transform: capitalize;
+                margin-top: -37px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        }
+
+        @media (max-width: 440px) {
+            h1 {
+                text-align: center;
+                margin-top: -17px;
+                color: rgb(255, 0, 0);
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 13.4px;
+            }
+
+            h2 {
+                text-align: center;
+                text-transform: capitalize;
+                margin-top: -16px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-size: 10px;
+            }
+
+            .table {
+                border-radius: 10px;
+                background-color: rgb(250, 216, 175);
+                margin: 0;
+                box-shadow: 0 0 10px rgba(69, 35, 35, 0.5);
+                padding: 0;
+            }
+
+            tr,
+            td,
+            th,
+            table {
+                font-size: 7px;
+                margin: 0;
+                padding: 0;
+            }
+
+            @keyframes cabeca {
+                0% {
+                    transform: translateY(-2px);
+                }
+
+                100% {
+                    transform: translateY(3px);
+                }
+            }
+        }
+
+        @media (max-width: 350px) {
+
+            tr,
+            td,
+            th,
+            table {
+                font-size: 6.2px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .table {
+                border-radius: 10px;
+                background-color: rgb(250, 216, 175);
+                margin: 0;
+                box-shadow: 0 0 10px rgba(69, 35, 35, 0.5);
+                padding: 1px;
+                margin-left: -7px;
+            }
+
+            body {
+                overflow-x: hidden;
+            }
         }
     </style>
 </head>
+
 <body>
-    <h1>Aqui temos uma tabela</h1>
-    <table>
-        <tr class="definicao">
-            <th>Horário</th>
-            <th>Segunda</th>
-            <th>Terça</th>
-            <th>Quarta</th>
-            <th>Quinta</th>
-            <th>Sexta</th>
-        </tr>
-        <tr>
-            <th>8:00</th>
-            <th>l22</th>
-            <th>l23</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>8:45</th>
-            <th>l32</th>
-            <th>l33</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>9:30</th>
-            <th>ola</th>
-            <th>ola</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>10:15</th>
-            <th>ola</th>
-            <th>ola</th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-        <tr>
-            <th>10:30</th>
-            <th>Intervalo</th>
-            <th>Intervalo</th>
-            <th>Intervalo</th>
-            <th>Intervalo</th>
-            <th>Intervalo</th>
-        </tr>
-    </table>
+    <div class="header">
+        <h1>|```````````"¨^^^``````````````````|</h1>
+        <h2>v Aqui temos a tabela de horários v</h2>
+    </div>
+    <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="6">1INFO2 Horários</th>
+                </tr>
+                <tr class="definicao">
+                    <th>Horário</th>
+                    <th class="seg">Segunda</th>
+                    <th class="ter">Terça</th>
+                    <th class="qua">Quarta</th>
+                    <th class="qui">Quinta</th>
+                    <th class="sex">Sexta</th>
+                </tr>
+            </thead>
+
+            <tr class="primeiraAula">
+                <td>8:00 - 8:45</td>
+                <th class="seg">Lingua Portuguesa<br />
+                    Valéria<br />
+                    E206</th>
+                <th class="ter">Intr. Comp.<br />
+                    Daniel Santos<br />
+                    A11</th>
+                <th class="qua">Biologia<br />
+                    Héder<br />
+                    E206</th>
+                <th class="qui">Programação<br />
+                    Fabio Moura<br />
+                    B3</th>
+                <th class="sex">Ed Fisica<br />
+                    Marcio Souza<br />
+                    Ginásio</th>
+            </tr>
+            <tr class="segundaAula">
+                <td>8:45 - 9:30</td>
+                <th class="seg">Lingua Portuguesa<br />
+                    Valéria<br />
+                    E206</th>
+                <th class="ter">Intr. Comp.<br />
+                    Daniel Santos<br />
+                    A11</th>
+                <th class="qua">Biologia<br />
+                    Héder<br />
+                    E206</th>
+                <th class="qui">Programação<br />
+                    Fabio Moura<br />
+                    B3</th>
+                <th class="sex">Ed Fisica<br />
+                    Marcio Souza<br />
+                    Ginásio</th>
+            </tr>
+            <tr class="terceiraAula">
+                <td>9:30 - 9:45</td>
+                <th class="seg">Intervalo</th>
+                <th class="ter">Intervalo</th>
+                <th class="qua">Intervalo</th>
+                <th class="qui">Intervalo</th>
+                <th class="sex">Intervalo</th>
+            </tr>
+            <tr class="quartaAula">
+                <td>9:45 - 10:30</td>
+                <th class="seg">Lingua Portuguesa<br />
+                    Valéria<br />
+                    E206</th>
+                <th class="ter">Matemática<br />
+                    Vanessa Neves<br />
+                    E206</th>
+                <th class="qua">Programação<br />
+                    Fabio Moura<br />
+                    B3</th>
+                <th class="qui">História<br />
+                    Ivan Furmann<br />
+                    E206</th>
+                <th class="sex">Quimica<br />
+                    Iglesias<br />
+                    E206</th>
+            </tr>
+            <tr class="quintaAula">
+                <td>10:30 - 11:15</td>
+                <th class="seg">Geografia <br />
+                    Paulo Almeida<br />
+                    E206</th>
+                <th class="ter">Artes<br />
+                    Jaqueline<br />
+                    Sala_Artes</th>
+                <th class="qua">Programação<br />
+                    Fabio Moura<br />
+                    B3</th>
+                <th class="qui">História<br />
+                    Ivan Furmann<br />
+                    E206</th>
+                <th class="sex">Quimica<br />
+                    Iglesias<br />
+                    E206</th>
+            </tr>
+            <tr class="sextaAula">
+                <td>11:15 - 12:00</td>
+                <th class="seg">Geografia<br />
+                    Paulo Almeida<br />
+                    E206</th>
+                <th class="ter">Artes<br />
+                    Jaqueline<br />
+                    Sala_Artes</th>
+                <th class="qua">---</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+            <tr class="setimaAula">
+                <td>12:00 - 13:00</td>
+                <th class="seg">Almoço</th>
+                <th class="ter">Almoço</th>
+                <th class="qua">Almoço</th>
+                <th class="qui">Almoço</th>
+                <th class="sex">Almoço</th>
+            </tr>
+            <tr class="oitavaAula">
+                <td>13:00 - 13:45</td>
+                <th class="seg">---</th>
+                <th class="ter">---</th>
+                <th class="qua">Desenvolvimento Web<br />
+                    Orlando<br />
+                    B3</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+            <tr class="nonaAula">
+                <td>13:45 - 14:30</td>
+                <th class="seg">Projeto Integrador <br />
+                    Kennedy <br />
+                    A11</th>
+                <th class="ter">Optativas</th>
+                <th class="qua">Desenvolvimento Web<br />
+                    Orlando<br />
+                    B3</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+            <tr class="decimaAula">
+                <td>14:30 - 15:15</td>
+                <th class="seg">Projeto Integrador <br />
+                    Kennedy <br />
+                    A11</th>
+                <th class="ter">Optativas</th>
+                <th class="qua">Desenvolvimento Web<br />
+                    Orlando<br />
+                    B3</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+            <tr class="onzeAula">
+                <td>15:15 - 15:30</td>
+                <th class="seg">Intervalo</th>
+                <th class="ter">Intervalo</th>
+                <th class="qua">Intervalo</th>
+                <th class="qui">Intervalo</th>
+                <th class="sex">Intervalo</th>
+            </tr>
+            <tr class="dozeAula">
+                <td>15:30 - 16:15</td>
+                <th class="seg">CLIFC <br />
+                    E206</th>
+                <th class="ter">Fisica <br />
+                    Marcelo Salvador <br />
+                    E206</th>
+                <th class="qua">Matemática<br />
+                    Vanessa Neves<br />
+                    E206</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+            <tr class="trezeAula">
+                <td>16:15 - 17:00</td>
+                <th class="seg">CLIFC <br />
+                    E206</th>
+                <th class="ter">Fisica <br />
+                    Marcelo Salvador <br />
+                    E206</th>
+                <th class="qua">Matemática<br />
+                    Vanessa Neves<br />
+                    E206</th>
+                <th class="qui">---</th>
+                <th class="sex">---</th>
+            </tr>
+
+        </table>
+    </div>
+
 </body>
+
 </html>
